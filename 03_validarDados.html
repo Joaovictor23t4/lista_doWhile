@@ -12,6 +12,33 @@
 
     //Entrada
 
+    let nome = prompt(`Informe um nome com mais de 3 letras:`);
+    let idade = Number(prompt(`Informe uma idade entre 0 e 150:`));
+    let salario = Number(prompt(`Informe um salário maior que zero`));
+    let sexo = prompt(`Informe um sexo: F - Feminino || M - Masculino`).toUpperCase();
+    let estadoCivil = prompt(`Informe um estado cívil: S - Solteiro(a) || C - Casado(a) || V - Viúvo(a) || D - Divorciado(a)`).toUpperCase();
+
+    while (nome.length <= 3) {
+        nome = prompt(`Informe um nome com mais de 3 letras:`);
+    }
+
+    while (idade < 0 || idade > 150) {
+        idade = Number(prompt(`Informe uma idade entre 0 e 150:`));
+    }
+
+    while (salario <= 0) {
+        salario = Number(prompt(`Informe um salário maior que zero`));
+    }
+
+    while (sexo !== "F" && sexo !== "M") {
+        sexo = prompt(`Informe um sexo: F - Feminino || M - Masculino`).toUpperCase();
+    }
+
+    while (estadoCivil !== "S" && estadoCivil !== "C" && estadoCivil !== "V" && estadoCivil !== "D") {
+        estadoCivil = prompt(`Informe um estado cívil: S - Solteiro(a) || C - Casado(a) || V - Viuvo(a) || D - Divorciado(a)`).toUpperCase();
+    }
+
+    document.write(`Dados corretos!`);
 
     //Processamento
 
@@ -19,3 +46,4 @@
     //Saída
 
 </script>
+        

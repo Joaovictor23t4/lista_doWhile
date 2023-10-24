@@ -7,6 +7,17 @@
 
     //Entrada
 
+    let paisA = 80000;
+    let paisB = 200000;
+    let anos = 0;
+
+    while (paisA <= paisB) {
+        paisA *= 1.03;
+        paisB *= 1.015;
+        anos++
+    }
+
+    document.write(`Demorou ${anos} para a população A (${Math.floor(paisA)} habitantes) igualar ou ultrapassar a população B (${Math.floor(paisB)} habitantes)`);
 
     //Processamento
 

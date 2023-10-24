@@ -6,8 +6,16 @@
     */
 
     //Entrada
+    let usuario = prompt(`Informe seu nome de usuário:`);
+    let senha = prompt(`Informe sua senha:`);
 
+    while (usuario === senha) {
+        alert(`Erro: usuario e senha iguais`);
+        usuario = prompt(`Informe novamente seu nome de usuário:`);
+        senha = prompt(`Informe novamente sua senha:`);
+    }
 
+    document.write(`Usuário e senha válidos!`);
     //Processamento
 
 
