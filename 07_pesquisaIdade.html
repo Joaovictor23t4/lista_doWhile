@@ -45,9 +45,8 @@
             return valor.idade > maior.idade ? valor : maior;
         }, objetoPessoas[0].idade);
 
-        menorIdade = objetoPessoas.reduce((menor, valor) => {
-            return valor.idade < menor.idade ? valor : menor;
-        }, objetoPessoas[0].idade);
+        menorIdade = objetoPessoas.sort((a, b) => a.idade - b.idade)[0].idade;
+        maiorIdade = objetoPessoas.sort((a, b) => a.idade - b.idade)[objetoPessoas.length - 1].idade;
 
         qtdMulheres = objetoPessoas.filter((pessoa) => pessoa.sexo == "F").length;
 
