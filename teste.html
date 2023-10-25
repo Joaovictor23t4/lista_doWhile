@@ -1,0 +1,29 @@
+<script>
+    let objPessoas = [
+        {
+            id: 1,
+            nome: 'Joao',
+            idade: 20,
+            salario: 1000,
+            sexo: 'M'
+        },
+        {
+            id: 2,
+            nome: 'fabio',
+            idade: 21,
+            salario: 1500,
+            sexo: 'M'
+        },
+        {
+            id: 3,
+            nome: 'Fernanda',
+            idade: 22,
+            salario: 1000,
+            sexo: 'F'
+        }
+    ];
+    let menor = objPessoas.sort((a, b) => a.idade - b.idade)[0].idade;
+    let mediaSalario = objPessoas.reduce((soma, valor) => soma + valor.salario, 0) / objPessoas.length;
+    console.log(menor);
+    console.log(mediaSalario);
+</script>
