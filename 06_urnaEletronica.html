@@ -21,6 +21,37 @@
 
     //Entrada
 
+    let voto;
+    let contadorVotos = 0
+    let objetosVoto = [
+        { candidato: "Joaozinho", votos: 0 },
+        { candidato: "Mariazinha", votos: 0 }, 
+        { candidato: "Nulo", votos: 0 }, 
+        { candidato: "Branco", votos: 0 }
+    ];
+
+    do {
+        voto = Number(prompt(`Escolha o seu candidato: 1. Candidato Joãozinho
+        2. Candidato Mariazinha
+        3. Nulo
+        4. Branco
+        0. Encerrar`));
+        if (voto >= 1 && voto <= 4) {
+            objetosVoto[voto - 1].votos++;
+            contadorVotos++;
+        } else if (voto === 0) {
+            alert(`Votação encerrada`);
+        }
+         else {
+            alert(`Opção incorreta, tente novamente:`);
+        }
+    } while (voto !== 0);
+
+    console.log(objetosVoto[0].candidato);
+    const vencedor = (objetosVoto[0].votos > objetosVoto[1].votos) ? "Joãozinho ganhou" : (objetosVoto[1].votos > objetosVoto[0].votos) ? "Mariazinha ganhou" : "Empate";
+
+    document.write(`Total de votos candidato 1: ${objetosVoto[0].votos}<br> Total de votos candidato 2: ${objetosVoto[1].votos}<br> Porcentagem de votos nulos: ${(objetosVoto[2].votos * 100) / contadorVotos}<br> Porcentagem de votos brancos: ${(objetosVoto[3].votos * 100) / contadorVotos}<br> ${vencedor}`);
+
 
     //Processamento
 

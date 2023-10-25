@@ -7,14 +7,13 @@
 
     //Entrada
 
-    let senha = prompt(`Informe uma senha formada de 4 números`);
+    let senha = Number(prompt(`Informe uma senha formada de 4 números`));
 
-    while (senha.length < 4 || senha.length > 4) {
+    while (senha.toString().length < 4 || senha.toString().length > 4) {
         alert(`Erro: informe uma senha com 4 números:`);
         senha = Number(prompt(`Informe uma senha formada de 4 números`));
     }
-
-    console.log(senha.length)
+    
     document.write(`Senha correta`);
 
     //Processamento
